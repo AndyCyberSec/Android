@@ -11,7 +11,7 @@ mv cacert.pem $hash.0
 echo '[+] Running adb as root'
 adb root
 
-echo '[+] Remounting device FileSystem''
+echo '[+] Remounting device FileSystem'
 adb remount
 
 echo '[+] Pushing the certificate into the device tmp directory...'
