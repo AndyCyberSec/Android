@@ -1,6 +1,10 @@
 #!/bin/bash
 
-echo '[+] Conerting cacert.der to PEM format...'
+#Renaming cacert.cer to cacert.der
+echo '[+] Renaming cacert.cer to cacert.der...'
+mv cacert.cer cacert.der
+
+echo '[+] Converting cacert.der to PEM format...'
 openssl x509 -inform DER -in cacert.der -out cacert.pem
 hash=$(openssl x509 -inform PEM -subject_hash_old -in cacert.pem |head -1)
 
